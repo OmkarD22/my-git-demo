@@ -1,0 +1,48 @@
+🧩 Step 1: Create and export an environment variable
+
+Open Git Bash (or Linux terminal) and type:
+
+export MY_NAME="Omkar"
+
+
+✅ This creates an environment variable called MY_NAME with the value "Omkar".
+
+You can check it with:
+
+echo $MY_NAME
+
+
+Output:
+
+Omkar
+
+🧾 Step 2: Create a shell script that uses this variable
+
+Create a new file named show_var.sh
+
+nano show_var.sh
+
+
+Paste this content:
+
+#!/bin/bash
+# Script to access environment variable
+
+echo "Hello, $MY_NAME! This message is from your shell script."
+
+
+Save and exit (press CTRL + O, Enter, then CTRL + X).
+
+⚙️ Step 3: Make the script executable
+chmod +x show_var.sh
+
+▶️ Step 4: Run the script
+
+Now run it:
+
+./show_var.sh
+
+
+Output:
+
+Hello, Omkar! This message is from your shell script.

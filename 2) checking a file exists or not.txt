@@ -1,0 +1,22 @@
+2) checking a file exists or not 
+
+nano check_file.sh
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+#!/bin/bash
+# Script to check if a file exists
+
+# Ask the user for a filename
+echo "Enter the file name:"
+read filename
+
+# Check if file exists
+if [ -e "$filename" ]; then
+    echo "✅ The file '$filename' exists."
+else
+    echo "❌ The file '$filename' does not exist."
+fi
+// paste this
+
+xxxxxxxxxxxxxxxxxxxxxxxxxx
+ctrl0 then enter then ctrl x then ./check_file.sh 

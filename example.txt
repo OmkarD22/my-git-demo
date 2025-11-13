@@ -1,0 +1,5 @@
+The quick brown fox jumps over the lazy dog.
+This is a sample text file to demonstrate word, line, and character counting.
+Shell scripting is a powerful tool for automating repetitive tasks.
+Git Bash allows running Linux commands on Windows efficiently.
+Each line here helps test the wc (word count) command.

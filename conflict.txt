@@ -1,0 +1,103 @@
+Step 1: Make sure you’re in your project folder
+cd "C:/Users/Asus/OneDrive - Bharatividyapeeth/Desktop/BI"
+
+
+Check you’re inside the repo:
+
+git status
+
+
+If it says something like “On branch main” or “On branch master”, you’re good.
+If not, initialize it:
+
+git init
+git add .
+git commit -m "Initial commit"
+
+🌿 Step 2: Create a new branch named feature
+git branch feature
+
+
+Check all branches:
+
+git branch
+
+
+You should see:
+
+  feature
+* main
+
+
+The * indicates your current branch.
+
+🔀 Step 3: Switch to the feature branch
+git checkout feature
+
+
+Now you’re working inside the feature branch.
+
+✏️ Step 4: Make some changes
+
+For example, edit your demo.txt file:
+
+echo "This is a new feature being added!" >> demo.txt
+
+
+Then stage and commit:
+
+git add demo.txt
+git commit -m "Added new feature line in demo.txt"
+
+🔁 Step 5: Switch back to the main branch
+git checkout main
+
+
+Now, let’s make a different change in the same file (to simulate a possible merge conflict):
+
+echo "This is the main branch update!" >> demo.txt
+
+
+Then:
+
+git add demo.txt
+git commit -m "Updated demo.txt in main branch"
+
+🧩 Step 6: Merge the feature branch into main
+git merge feature
+
+Possible outcomes:
+
+✅ If no conflicts → Git merges automatically.
+
+⚠️ If there’s a merge conflict, Git will show something like:
+
+CONFLICT (content): Merge conflict in demo.txt
+
+⚔️ Step 7: Resolving Merge Conflicts (if any)
+
+Open demo.txt and look for lines like this:
+
+<<<<<<< HEAD
+This is the main branch update!
+=======
+This is a new feature being added!
+>>>>>>> feature
+
+
+Manually edit it to keep what you want, for example:
+
+This is the main branch update!
+This is a new feature being added!
+
+
+Then stage and commit the resolved file:
+
+git add demo.txt
+git commit -m "Resolved merge conflict between main and feature"
+
+✅ Step 8: Verify the merge
+git log --oneline --graph --all
+
+
+You should see a merged history of both branches.
